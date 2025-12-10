@@ -35,10 +35,10 @@ export default function Hero() {
       style={{ backgroundImage }}
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-800 px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-24 text-gray-200 mx-auto"
     >
-      <div className="flex flex-col gap-4 sm:gap-6 text-center justify-center items-center max-w-3xl z-10 px-4">
+      <div className="flex flex-col gap-4 sm:gap-6 text-center justify-center items-center max-w-4xl z-10 px-4">
         <p className="text-sm sm:text-base text-gray-300">Building Fast & Modern Web Experiences</p>
         <h1 className="mt-2 sm:mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          Hi, I'm Sunera — a{" "}
+          Hi, I'm Sunera — a{" "}<br />
           <TextType
             text={["MERN Stack Developer.", "Computer Science Student."]}
             typingSpeed={75}
