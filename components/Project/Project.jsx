@@ -36,7 +36,7 @@ export default function Project() {
             text={"A few of my favorite projects I've designed and developed."}
           />
         </div>
-        <div className="flex flex-wrap gap-8 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} index={index} {...project} />
           ))}
