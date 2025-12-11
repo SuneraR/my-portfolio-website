@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import TextType from "./Text/TextType";
 const StarsCanvas = dynamic(() => import("./StarsCanvas"), {
   ssr: false,
+  loading: () => null,
 });
 
 const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];

@@ -1,3 +1,6 @@
+import AboutMe from "@/components/About/AboutMe";
+import Contact from "@/components/Contact/Contact";
+import Divider from "@/components/Divider";
 import Hero from "@/components/Hero";
 import Project from "@/components/Project/Project";
 import Skill from "@/components/Skill-Section/Skill";
@@ -7,7 +10,12 @@ export default function Home() {
     <>
       <Hero />
       <Skill />
+      <Divider />
       <Project />
+      <Divider />
+      <AboutMe />
+      <Divider />
+      <Contact />
     </>
   );
 }
