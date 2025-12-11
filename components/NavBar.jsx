@@ -8,7 +8,7 @@ export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="relative bg-gray-800 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px ">
+    <nav className="sticky top-0 z-50 bg-gray-800/95 backdrop-blur-md border-b border-white/10 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
