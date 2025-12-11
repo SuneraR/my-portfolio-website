@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import logo from "@/images/Logos/mylogo.png";
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,7 +52,7 @@ export default function NavBar() {
           </div>
           <div className="flex flex-1 items-center justify-center w-full sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <span className="text-white font-bold text-xl">MyPortfolio</span>
+              <Image className="w-8" src={logo} alt="Logo" />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
