@@ -4,7 +4,7 @@ import MyImageCom from "./Image";
 
 export default function AboutMe() {
   return (
-    <div className="py-10">
+    <section id="about" className="py-10">
       <div className="flex flex-col gap-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Heading text={"About Me"} />
         <div className="flex flex-wrap gap-4 justify-evenly items-center">
@@ -12,6 +12,6 @@ export default function AboutMe() {
           <AboutCard />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

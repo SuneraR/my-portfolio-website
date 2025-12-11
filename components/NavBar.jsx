@@ -52,24 +52,32 @@ export default function NavBar() {
           </div>
           <div className="flex flex-1 items-center justify-center w-full sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <Image className="w-8" src={logo} alt="Logo" />
+              <a href="#hero">
+                <Image className="w-8" src={logo} alt="Logo" />
+              </a>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="#skills"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
                 >
                   Skills
                 </a>
                 <a
-                  href="#"
+                  href="#projects"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
                 >
                   Projects
                 </a>
                 <a
-                  href="#"
+                  href="#contact"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+                >
+                  Contact
+                </a>
+                <a
+                  href="#about"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
                 >
                   About
@@ -77,29 +85,32 @@ export default function NavBar() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        
-          </div>
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>
         </div>
       </div>
 
-      <div className={`sm:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`sm:hidden ${mobileMenuOpen ? "block" : "hidden"}`}>
         <div className="space-y-1 px-2 pt-2 pb-3">
-         
           <a
-            href="#"
+            href="#skills"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
           >
             Skills
           </a>
           <a
-            href="#"
+            href="#projects"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
           >
             Projects
           </a>
           <a
-            href="#"
+            href="#contact"
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+          >
+            Contact
+          </a>
+          <a
+            href="#about"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
           >
             About

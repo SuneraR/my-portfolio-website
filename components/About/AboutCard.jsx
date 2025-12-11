@@ -7,6 +7,7 @@ export default function AboutCard() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
+      id="about"
       className="max-w-3xl mx-auto bg-white dark:bg-zinc-900 rounded-2xl shadow-md p-8 md:p-12 flex flex-col md:flex-row items-center gap-8"
     >
       <div className="flex-1 text-center md:text-left space-y-4">

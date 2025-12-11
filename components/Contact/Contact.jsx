@@ -5,7 +5,7 @@ import { sendEmail } from "@/actions/email";
 
 export default function Contact() {
   return (
-    <div className="py-10 sm:py-16">
+    <section id="contact" className="py-10 sm:py-16">
       <div className="flex flex-col gap-8 sm:gap-12 lg:gap-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-2.5">
           <Heading text={"Contact Me"} />
@@ -15,6 +15,6 @@ export default function Contact() {
           <ContactForm action={sendEmail} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

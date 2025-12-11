@@ -17,7 +17,7 @@ export default function Skill() {
     { name: "MySQL", logo: mysql },
   ];
   return (
-    <div className="py-10">
+    <section id="skills" className="py-10">
       <div className="flex flex-col gap-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Heading text="Technical Skills" />
         <div className="flex flex-wrap justify-around items-center gap-4">
@@ -33,6 +33,6 @@ export default function Skill() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
