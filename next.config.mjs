@@ -6,6 +6,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    useDeploymentId: true,
+    useDeploymentIdServerActions: true,
+  },
 };
 
 export default nextConfig;
