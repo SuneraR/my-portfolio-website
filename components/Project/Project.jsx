@@ -1,6 +1,7 @@
 import Heading from "../Heading";
 import SubHeading from "../SubHeading";
 import joblistingImage from "@/images/ProjectImages/JobListing.png";
+import nforceImage from "@/images/ProjectImages/Nforce.png";
 import ProjectCard from "./ProjectCard";
 
 export default function Project() {
@@ -26,6 +27,27 @@ export default function Project() {
       image: joblistingImage,
       source_code_link: "https://github.com/SuneraR/Job-listing-website.git",
     },
+    {
+      name: "Nforce Club Website",
+      description:
+        "A responsive website for Nforce Club, showcasing events, member profiles, and club activities with an engaging design and user-friendly navigation.",
+      tags: [
+        {
+          name: "react",
+          color: "text-blue-400",
+        },
+        {
+          name: "nodejs",
+          color: "text-green-400",
+        },
+        {
+          name: "mongodb",
+          color: "text-green-300",
+        },
+      ],
+      image: nforceImage,
+      source_code_link: "https://github.com/SuneraR/nforce-website.git"
+    }
   ];
   return (
     <div className="py-10">
