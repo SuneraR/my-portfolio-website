@@ -2,6 +2,7 @@ import Heading from "../Heading";
 import SubHeading from "../SubHeading";
 import joblistingImage from "@/images/ProjectImages/JobListing.png";
 import nforceImage from "@/images/ProjectImages/Nforce.png";
+import documentationGenerator from "@/images/ProjectImages/Documentation.jpg"
 import ProjectCard from "./ProjectCard";
 
 export default function Project() {
@@ -47,6 +48,31 @@ export default function Project() {
       ],
       image: nforceImage,
       source_code_link: "https://github.com/SuneraR/nforce-website.git"
+    },
+     {
+      name: "AI Powered Documentation Generator",
+      description:
+        "AI-powered documentation generator that analyzes GitHub repositories and automatically produces clean, professional README and project documentation using local LLMs.",
+      tags: [
+        {
+          name: "nextJS",
+          color: "text-white",
+        },
+        {
+          name: "nodejs",
+          color: "text-green-400",
+        },
+        {
+          name: "Ollama API",
+          color: "text-[#FFFAFA]",
+        },
+        {
+          name:"DeepSeek Coder",
+          color: "text-[#536af5]"
+        }
+      ],
+      image: documentationGenerator,
+      source_code_link: "https://github.com/SuneraR/Documentation-Generator-Backend.git"
     }
   ];
   return (
