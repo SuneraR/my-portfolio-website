@@ -1,6 +1,9 @@
+"use client";
+
 import GitHub from "@/images/Logos/github.png";
 import Linkedin from "@/images/Logos/linkedin.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -15,58 +18,73 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm">
-            <a
+            <Link
               href="#projects"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              onClick={(e) => {
+                document
+                  .querySelector("#projects")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-105"
             >
               Projects
-            </a>
-            <a
+            </Link>
+            <Link
               href="#skills"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              onClick={(e) => {
+                document
+                  .querySelector("#skills")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-105"
             >
               Skills
-            </a>
-            <a
+            </Link>
+            <Link
               href="#contact"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              onClick={(e) => {
+                document
+                  .querySelector("#contact")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-105"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Social Links */}
           <div className="flex items-center gap-4 sm:gap-5">
-            <div className="flex flex-col gap-2 justify-center items-center">
+            <div className="flex flex-col gap-2 justify-center items-center group">
               <Image
                 src={GitHub}
                 alt="GitHub Logo"
-                className="w-4 h-4 sm:w-5 sm:h-5"
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:scale-110"
               />
-              <a
+              <Link
                 href="https://github.com/SuneraR"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200 text-xs sm:text-sm font-medium"
+                className="text-gray-400 hover:text-white transition-all duration-300 text-xs sm:text-sm font-medium"
               >
                 GitHub
-              </a>
+              </Link>
             </div>
-            <div className="flex flex-col gap-2 justify-center items-center">
+            <div className="flex flex-col gap-2 justify-center items-center group">
               <Image
                 src={Linkedin}
                 alt="LinkedIn Logo"
-                className="w-4 h-4 sm:w-5 sm:h-5"
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:scale-110"
               />
 
-              <a
+              <Link
                 href="https://www.linkedin.com/in/sunera-ruwanara-b7b940252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200 text-xs sm:text-sm font-medium"
+                className="text-gray-400 hover:text-white transition-all duration-300 text-xs sm:text-sm font-medium"
               >
                 LinkedIn
-              </a>
+              </Link>
             </div>
           </div>
         </div>

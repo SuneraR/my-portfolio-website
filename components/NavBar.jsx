@@ -3,19 +3,29 @@
 import { useState } from "react";
 import Image from "next/image";
 import logo from "@/images/Logos/mylogo.png";
+import Link from "next/link";
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <nav className="sticky top-0 z-50 bg-gray-800/95 backdrop-blur-md border-b border-white/10 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px">
+    <nav className="sticky top-0 z-50 bg-gray-800/95 backdrop-blur-md border-b border-white/10 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px transition-all duration-300">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
+              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500 transition-all duration-300"
               aria-expanded={mobileMenuOpen}
             >
               <span className="absolute -inset-0.5"></span>
@@ -52,36 +62,40 @@ export default function NavBar() {
           </div>
           <div className="flex flex-1 items-center justify-center w-full sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <a href="#hero">
+              <Link href="#hero" onClick={(e) => handleNavClick(e, '#hero')} className="transition-transform duration-300 hover:scale-110 block">
                 <Image className="w-8" src={logo} alt="Logo" />
-              </a>
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <a
+                <Link
                   href="#skills"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+                  onClick={(e) => handleNavClick(e, '#skills')}
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
                 >
                   Skills
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#projects"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+                  onClick={(e) => handleNavClick(e, '#projects')}
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
                 >
                   Projects
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#contact"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+                  onClick={(e) => handleNavClick(e, '#contact')}
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
                 >
                   Contact
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#about"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+                  onClick={(e) => handleNavClick(e, '#about')}
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
                 >
                   About
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -89,32 +103,36 @@ export default function NavBar() {
         </div>
       </div>
 
-      <div className={`sm:hidden ${mobileMenuOpen ? "block" : "hidden"}`}>
+      <div className={`sm:hidden transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="space-y-1 px-2 pt-2 pb-3">
-          <a
+          <Link
             href="#skills"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            onClick={(e) => handleNavClick(e, '#skills')}
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
           >
             Skills
-          </a>
-          <a
+          </Link>
+          <Link
             href="#projects"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            onClick={(e) => handleNavClick(e, '#projects')}
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
           >
             Projects
-          </a>
-          <a
+          </Link>
+          <Link
             href="#contact"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            onClick={(e) => handleNavClick(e, '#contact')}
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
           >
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="#about"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            onClick={(e) => handleNavClick(e, '#about')}
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-all duration-300"
           >
             About
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

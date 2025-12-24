@@ -55,7 +55,14 @@ export default function Hero() {
           I focus on crafting clean UIs, efficient backends, and smooth user
           experiences using React, Next.js, Node.js, MongoDB and MySql.
         </p>
-        <a href="#contact" className="w-fit">
+        <a 
+          href="#contact" 
+          onClick={(e) => {
+            e.preventDefault();
+            document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }}
+          className="w-fit"
+        >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
@@ -69,7 +76,7 @@ export default function Hero() {
               border,
               boxShadow,
             }}
-            className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-800 px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base text-gray-50 transition-colors hover:bg-gray-800/50"
+            className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-800 px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base text-gray-50 transition-all duration-300 hover:bg-gray-800/50"
           >
             Let's collaborate
           </motion.button>

@@ -3,3 +3,19 @@
 html {
   scroll-behavior: smooth;
 }
+
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, textarea, select {
+  transition-property: all;
+  transition-duration: 300ms;
+}
+
+/* Smooth transform transitions */
+.transition-transform {
+  transition-property: transform;
+  transition-duration: 300ms;
+}

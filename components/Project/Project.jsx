@@ -2,7 +2,7 @@ import Heading from "../Heading";
 import SubHeading from "../SubHeading";
 import joblistingImage from "@/images/ProjectImages/JobListing.png";
 import nforceImage from "@/images/ProjectImages/Nforce.png";
-import documentationGenerator from "@/images/ProjectImages/Documentation.jpg"
+import documentationGenerator from "@/images/ProjectImages/Documentation.jpeg"
 import ProjectCard from "./ProjectCard";
 
 export default function Project() {
@@ -52,7 +52,7 @@ export default function Project() {
      {
       name: "AI Powered Documentation Generator",
       description:
-        "AI-powered documentation generator that analyzes GitHub repositories and automatically produces clean, professional README and project documentation using local LLMs.",
+        "AI-powered documentation generator that analyzes GitHub repositories or project ZIP file and automatically produces clean, professional README and project documentation using local LLMs.",
       tags: [
         {
           name: "nextJS",
