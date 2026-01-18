@@ -5,6 +5,39 @@ export async function sendEmail(prevState, formData) {
   const name = formData.get("name");
   const email = formData.get("email");
   const message = formData.get("message");
+  const captchaToken = formData.get("captchaToken");
+  const siteKey = formData.get("siteKey");
+
+  if (!captchaToken) {
+    throw new Error("Captcha missing");
+  }
+
+  const secretKey = siteKey && siteKey.startsWith("1x")
+    ? process.env.TURNSTILE_TEST_SECRET_KEY || "1x0000000000000000000000000000000AA"
+    : process.env.TURNSTILE_SECRET_KEY;
+
+  if (!secretKey) {
+    throw new Error("Captcha secret missing");
+  }
+
+  const res = await fetch(
+    "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        secret: secretKey,
+        response: captchaToken,
+      }),
+    }
+  );
+
+  const data = await res.json();
+
+  if (!data.success) {
+    throw new Error("Captcha verification failed");
+  }
+
 
 
    let errors = [];
